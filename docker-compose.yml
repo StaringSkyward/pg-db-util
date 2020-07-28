@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  logbooks-db:
+    container_name: pgdbutil-db
+    image: postgres:11-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=pg_db_util_development
+    ports:
+      - 5432:5432
+    volumes:
+      - pg_db_util_development_data:/var/lib/postgresql/data
+
+volumes:
+  pg_db_util_development_data:
+    external: false

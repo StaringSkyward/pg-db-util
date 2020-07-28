@@ -1,0 +1,17 @@
+[package]
+name = "db"
+version = "0.1.0"
+authors = ["Matthew Law <staringskyward@gmail.com>"]
+license = "MIT"
+description = "A simple utility to allow easy creation, migration, seeding and dropping of a PostgreSQL database"
+readme = "README.md"
+repository = "https://github.com/StaringSkyward/pg-db-util"
+keywords = ["database", "sql", "migrations", "postgresql"]
+categories = ["database"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33.1"
+refinery = { version = "0.3", features = ["postgres"]}
+postgres = "0.17.5"
+tokio-postgres = "0.5.5"
